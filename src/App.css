@@ -1,0 +1,99 @@
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.count {
+  color: #666;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+}
+
+.filterButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #666;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterButton:hover {
+  border-color: #ccc;
+}
+
+.filterButton.active {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
+.clearButton {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #cc6666;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.clearButton:hover {
+  color: #aa4444;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+}
