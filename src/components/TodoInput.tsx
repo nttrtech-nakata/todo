@@ -25,12 +25,12 @@ export function TodoInput({ onAdd }: Props) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="What needs to be done?"
+        placeholder="何をする？"
         className={styles.input}
         autoFocus
       />
       <button type="submit" className={styles.button}>
-        Add
+        追加
       </button>
     </form>
   );

@@ -19,14 +19,20 @@ function App() {
 
   const filters: FilterType[] = ['all', 'active', 'completed'];
 
+  const filterLabels: Record<FilterType, string> = {
+    all: 'すべて',
+    active: '未完了',
+    completed: '完了',
+  };
+
   return (
     <div className="app">
-      <h1 className="title">Todo App</h1>
+      <h1 className="title">やることリスト</h1>
       <div className="container">
         <TodoInput onAdd={addTodo} />
         <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
         <div className="footer">
-          <span className="count">{activeCount} items left</span>
+          <span className="count">残り {activeCount} 件</span>
           <div className="filters">
             {filters.map((f) => (
               <button
@@ -35,7 +41,7 @@ function App() {
                 onClick={() => setFilter(f)}
                 className={`filterButton ${filter === f ? 'active' : ''}`}
               >
-                {f.charAt(0).toUpperCase() + f.slice(1)}
+                {filterLabels[f]}
               </button>
             ))}
           </div>
@@ -45,7 +51,7 @@ function App() {
               onClick={clearCompleted}
               className="clearButton"
             >
-              Clear completed
+              完了を削除
             </button>
           )}
         </div>
