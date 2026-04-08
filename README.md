@@ -8,6 +8,7 @@ React + TypeScript + Vite で作成したシンプルなTODOアプリです。
 - TODO の完了/未完了の切り替え
 - TODO の削除
 - フィルター機能（All / Active / Completed）
+- PR練習用の変更（この行は後で消します）
 - 完了済みTODOの一括削除
 - LocalStorage によるデータ永続化
 
